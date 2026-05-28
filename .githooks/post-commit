@@ -1,0 +1,4 @@
+#!/bin/sh
+# Auto-push after every commit in this repository.
+
+git push origin HEAD
