@@ -12,6 +12,13 @@ Vision: To shape the future of security and IT infrastructure by combining advan
 technology with exceptional service. We aim to make safety and connectivity accessible 
 to all, while creating safer communities and smarter workplaces through trusted 
 systems that inspire confidence and peace of mind. 
+
+## Project Images
+
+![Access control sample](images/Acc.jpg)
+![CCTV dome sample](images/ccdome.jpg)
+![IT infrastructure sample](images/IT.jpg)
+
 Website goals and objectives 
 • Goals: 
 ▪ Build credibility and trust by showcasing professionalism and expertise. 
