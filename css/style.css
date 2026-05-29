@@ -219,8 +219,9 @@ main {
 }
 
 .image-grid img {
-  width: 100%;
-  height: auto; /* maintain aspect ratio */
+  width: 200px;       /* fixed width */
+  height: 200px;      /* fixed height */
+  object-fit: cover;  /* crops images to fit without distortion */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
