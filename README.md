@@ -18,6 +18,7 @@ systems that inspire confidence and peace of mind.
 ![Access control sample](images/Acc.jpg)
 ![CCTV dome sample](images/ccdome.jpg)
 ![IT infrastructure sample](images/IT.jpg)
+![Desktop](images/Screenshot%20(3).png)
 
 Website goals and objectives 
 • Goals: 
@@ -107,4 +108,3 @@ Interviews conducted with technicians and clients, along with site visits for fi
 insights.
 
 Desktop:
-![Desktop](images/Screenshot%20(3).pngjpg)
