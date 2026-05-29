@@ -118,3 +118,9 @@ insights.
   </ul>
 </section>
 
+## Changelog
+
+### May 2026
+- Added screenshot gallery image references.
+- Updated project documentation to include image examples.
+
