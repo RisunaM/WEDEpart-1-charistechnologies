@@ -146,3 +146,18 @@ main {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   padding: 20px;
   border
+
+  #map {
+  margin: 20px auto;
+  max-width: 900px;
+  border: 2px solid #003366; /* Royal blue border */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #FFFDD0; /* Cream white background */
+}
+
+#map h2 {
+  text-align: center;
+  color: #2ECC71; /* Green highlight */
+  margin-bottom: 10px;
+}
