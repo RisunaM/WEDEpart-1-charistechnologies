@@ -107,4 +107,14 @@ Reference
 Interviews conducted with technicians and clients, along with site visits for firsthand 
 insights.
 
-Desktop:
+<!-- Reference List -->
+<section class="references">
+  <h2>References</h2>
+  <ul>
+    <li><a href="https://www.google.com/maps" target="_blank">Google Maps – Location and Directions</a></li>
+    <li><a href="https://www.charistech.co.za" target="_blank">Charis Technologies Official Website</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs – CSS Guidelines</a></li>
+    <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools – HTML Reference</a></li>
+  </ul>
+</section>
+
