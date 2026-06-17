@@ -1,6 +1,6 @@
 // script.js
 
-// ✅ Page load animation for header
+// ✅ Header fade-in animation
 window.onload = function() {
     const header = document.querySelector("header");
     if (header) {
@@ -12,7 +12,7 @@ window.onload = function() {
     }
 };
 
-// ✅ Smooth scroll for navigation links
+// ✅ Smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
         e.preventDefault();
@@ -22,11 +22,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ✅ Gallery hover animation
-document.querySelectorAll(".gallery img").forEach(img => {
+// ✅ Gallery hover zoom
+document.querySelectorAll(".image-grid img").forEach(img => {
     img.addEventListener("mouseover", () => {
         img.style.transform = "scale(1.05)";
-        img.style.transition = "transform 0.3s ease";
     });
     img.addEventListener("mouseout", () => {
         img.style.transform = "scale(1)";
@@ -40,14 +39,13 @@ function validateForm() {
     const message = document.getElementById("message").value.trim();
 
     if (!name || !email || !message) {
-        alert("Please fill in all fields before submitting.");
+        alert("Please fill in all fields.");
         return false;
     }
 
-    // Simple email check
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!email.match(emailPattern)) {
-        alert("Please enter a valid email address.");
+        alert("Invalid email format.");
         return false;
     }
 
