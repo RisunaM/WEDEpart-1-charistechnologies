@@ -69,5 +69,11 @@ The website is intended for:
 - W3Schools – HTML and web reference material
 
 ## Changelog
-See [CHANGELOG.md](CHANGELOG.md) for the full project update history.
+The full project history is maintained in [CHANGELOG.md](CHANGELOG.md).
+
+### Recent updates
+- Updated project documentation and improved the README structure.
+- Added clearer project overview, goals, target audience, and technical details.
+- Refined website content and layout documentation.
+- Added project screenshots and updated references.
 
