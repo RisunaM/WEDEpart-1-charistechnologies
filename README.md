@@ -80,3 +80,10 @@ The full project history is maintained in [CHANGELOG.md](CHANGELOG.md).
 
 Site is live at https://risunam.github.io/WEDEpart-1-charistechnologies/
 
+| Feature | Enhancement |
+| --- | --- |
+| **Event handling** | Uses ``addEventListener`` for better compatibility. |
+| **Smooth scroll** | Checks if the target element exists before scrolling. |
+| **Gallery animation** | Matches your CSS transition timing for smoother hover effects. |
+| **Form validation** | Adds emoji feedback and case‑insensitive email regex. |
+| **Load event** | Uses ``window.addEventListener("load")`` instead of ``onload`` for modern practice. |

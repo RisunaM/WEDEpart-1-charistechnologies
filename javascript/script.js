@@ -1,54 +1,55 @@
 // script.js
 
-// ✅ Header fade-in animation
-window.onload = function() {
-    const header = document.querySelector("header");
-    if (header) {
-        header.style.opacity = 0;
-        setTimeout(() => {
-            header.style.transition = "opacity 1.5s ease-in-out";
-            header.style.opacity = 1;
-        }, 300);
-    }
-};
+// 🌟 Header fade‑in animation
+window.addEventListener("load", () => {
+  const header = document.querySelector("header");
+  if (header) {
+    header.style.opacity = 0;
+    setTimeout(() => {
+      header.style.transition = "opacity 1.5s ease-in-out";
+      header.style.opacity = 1;
+    }, 300);
+  }
+});
 
-// ✅ Smooth scroll for navigation
+// 🌟 Smooth scroll for internal navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
+  anchor.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(anchor.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
-// ✅ Gallery hover zoom
+// 🌟 Gallery hover zoom (matches CSS transition)
 document.querySelectorAll(".image-grid img").forEach(img => {
-    img.addEventListener("mouseover", () => {
-        img.style.transform = "scale(1.05)";
-    });
-    img.addEventListener("mouseout", () => {
-        img.style.transform = "scale(1)";
-    });
+  img.addEventListener("mouseenter", () => {
+    img.style.transform = "scale(1.05)";
+  });
+  img.addEventListener("mouseleave", () => {
+    img.style.transform = "scale(1)";
+  });
 });
 
-// ✅ Form validation
+// 🌟 Form validation with clearer feedback
 function validateForm() {
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
 
-    if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return false;
-    }
+  if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+    alert("⚠️ Please fill in all fields before submitting.");
+    return false;
+  }
 
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!email.match(emailPattern)) {
-        alert("Invalid email format.");
-        return false;
-    }
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+  if (!email.value.match(emailPattern)) {
+    alert("⚠️ Please enter a valid email address.");
+    return false;
+  }
 
-    alert("Form submitted successfully!");
-    return true;
+  alert("✅ Form submitted successfully!");
+  return true;
 }
