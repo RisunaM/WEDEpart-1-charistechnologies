@@ -1,144 +1,179 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Typography and colours */
 body {
-  font-family: Arial, sans-serif;
-  color: white;
-  background: #000; /* fallback if video doesn’t load */
+  font-family: 'Arial','Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+  color: #330ec8;
   overflow-x: hidden;
 }
 
-/* Video Background */
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* keeps video behind content */
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #2ECC71;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em 0; /* consistent bottom spacing */
 }
 
-/* Optional Overlay for readability */
-.video-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 0;
+h1 { font-size: 2.5rem; margin-bottom: 0.75em; }
+h2 { font-size: 2rem; margin-bottom: 0.75em; }
+h3 { font-size: 1.75rem; margin-bottom: 0.75em; }
+
+/* Paragraphs */
+p {
+  margin: 0 0 1em 0; /* consistent spacing */
+  font-size: 1rem;
+  text-align: justify;
 }
+
+/* Index page override: all paragraphs white */
+.index-page p {
+  color: #FFFFFF;
+}
+
+/* Links */
+a { text-decoration: none; color: #330ec8; }
+a:hover { color: #2ECC71; }
 
 /* Header */
 header {
   position: relative;
   z-index: 1;
-  background: transparent; /* removes blue box */
+  background: transparent;
   text-align: center;
-  padding: 20px;
+  padding: 15px 0; /* balanced vertical padding */
 }
 
 /* Title */
 header h1 {
+  color: #00cc66;
   font-size: 2.5em;
-  color: #00ff66; /* green accent */
-  margin-bottom: 10px;
+  line-height: 1.2;
+  margin: 0; /* no extra gap */
 }
 
-/* Menu Button */
-#menu-toggle {
-  background-color: #00ff66;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Navigation */
+/* Navigation bar */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: transparent;
-  margin-top: 15px;
+  background: rgba(51, 14, 200, 0.7);
+  margin: 10px 0; /* small gap above/below nav */
+  border-radius: 5px;
+  padding: 10px 0; /* consistent spacing inside nav */
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
+nav ul li { margin: 0 15px; }
 nav ul li a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
+nav ul li a:hover { color: #2ECC71; }
 
-/* Hover effect */
-nav ul li a:hover {
-  color: #00ff66;
+/* Buttons */
+.button {
+  background-color: #2ECC71;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 10px; /* consistent spacing around buttons */
+}
+.button:hover { background-color: #330ec8; transform: scale(1.05); }
+
+/* Sections */
+section {
+  padding: 40px 20px; /* consistent spacing for all sections */
 }
 
-/* Remove blue focus box */
-a, button {
-  outline: none;
-  border: none;
+/* Cards */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #330ec8;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px; /* spacing between cards */
 }
 
-a:focus, button:focus {
-  outline: none;
-  box-shadow: none;
+/* Gallery */
+.gallery { padding: 40px 20px; }
+.gallery h2 { text-align: center; color: #2ECC71; margin-bottom: 20px; }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; /* balanced spacing between images */
+  margin: 20px 0;
 }
+.image-grid img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.image-grid img:hover { transform: scale(1.05); }
+
+/* Map Section */
+#map {
+  margin: 40px auto;
+  max-width: 900px;
+  border: 2px solid #330ec8;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+#map h2 { text-align: center; color: #2ECC71; margin-bottom: 15px; }
 
 /* Hero Section */
 .content {
   position: relative;
   z-index: 1;
-  text-align: center;
-  padding-top: 20%;
-}
-
-.content h2 {
-  font-size: 2em;
-  color: #00ff66;
-  margin-bottom: 15px;
-}
-
-.content p {
-  font-size: 1.1em;
-  color: #e0e0e0;
-  margin-bottom: 25px;
-}
-
-/* Buttons */
-.button {
-  background-color: #00ff66;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  padding: 80px 20px; /* balanced spacing top/bottom */
+  margin-top: 0;
+  font-family: Arial, sans-serif;
 }
 
-.button:hover {
-  background-color: #00994d;
+/* Responsive */
+@media (max-width: 1024px) {
+  nav ul { flex-direction: column; align-items: center; }
+  h1 { font-size: 2rem; }
+  section { padding: 30px 15px; }
 }
-
+@media (max-width: 768px) {
+  nav ul { flex-direction: column; }
+  h1 { font-size: 1.5rem; }
+  section { padding: 20px 10px; }
+}
 /* Footer */
 footer {
-  position: relative;
-  z-index: 1;
+  background: rgba(51, 14, 200, 0.7); /* semi-transparent royal blue */
+  color: #FFFFFF;
   text-align: center;
-  padding: 20px;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 20px; /* balanced vertical spacing */
+  margin-top: 40px;   /* space above footer */
+}
+
+footer p {
+  margin: 10px 0;     /* consistent spacing between lines */
+  line-height: 1.6;   /* improves readability */
 }
