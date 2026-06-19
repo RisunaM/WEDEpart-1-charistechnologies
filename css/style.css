@@ -191,7 +191,7 @@ section {
 
 /* Footer spacing */
 footer {
-  background: rgba(51, 14, 200, 0.7);
+  background: transparent;
   color: #fff;
   text-align: center;
   padding: 40px 20px;   /* balanced vertical spacing */
@@ -222,7 +222,7 @@ nav ul.active {
   top: 20px;         /* distance from top of viewport */
   right: 20px;       /* distance from right side */
   background-color: #2ECC71;
-  color: #fff;
+  color: #0b2df3;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -247,5 +247,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #FFFFFF;        /* white on hover for contrast */
+  color: #072de8;        /* white on hover for contrast */
 }
