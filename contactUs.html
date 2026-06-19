@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/script.js"></script>
-    <button id="menu-toggle" class="button">☰ Menu</button>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Charis Technologies</title>
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 
-
-<meta name="description" content="Charis Technologies offers CCTV, access control, alarms, and IT solutions for homes, businesses, and institutions.">
-<meta name="keywords" content="CCTV, access control, alarms, IT solutions, Charis Technologies, security systems">
-<meta name="author" content="Risuna Charity Mashele">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <!-- SEO Meta -->
+  <meta name="description" content="Get in touch with Charis Technologies for CCTV, alarms, access control, and IT solutions. Contact us for quotes, support, and enquiries.">
+  <meta name="keywords" content="Charis Technologies contact, CCTV enquiries, IT solutions, Johannesburg">
+  <meta name="author" content="Risuna Charity Mashele">
 </head>
 <body>
-     <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contactus.html">Contact Us</a>
-    <a href="support.html">Support</a>
-    <a href="privacypolicy&termsofservice.html">Privacy Policy & Terms of Service</a>
-<h1>Contact Us</h1>
 
-<section>
+  <!-- Header & Navigation -->
+  <header>
+    <h1>Contact Us</h1>
+    <button id="menu-toggle" class="button">☰ Menu</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Form -->
+  <section>
     <h2>Get in Touch</h2>
-    <form>
-        <label for="name">Name:</label><br>
-        <input id="name" type="text" name="name" required><br><br>
-        <label for="email">Email:</label><br>
-        <input id="email" type="email" name="email" required><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
-        <button type="submit">Send Message</button>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label><br>
+      <input id="name" type="text" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input id="email" type="email" name="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <button type="submit" class="button">Send Message</button>
     </form>
-</section>
+  </section>
 
-
-<section>
+  <!-- Office Info -->
+  <section>
     <h2>Our Office</h2>
     <p><strong>Address:</strong> 21 Allen Road, Johannesburg, Gauteng, South Africa</p>
-    <p>Phone:+27 83 400 7413</p>
-    <p>Email: info@charistech.co.za</p>
-</section>
+    <p><strong>Phone:</strong> +27 83 400 7413</p>
+    <p><strong>Email:</strong> info@charistech.co.za</p>
+  </section>
 
-<section id="map">
-  <h2>Route to Our Office</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.628462127766!2d28.148602074996194!3d-26.176226977093865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e951187637b6cc3%3A0x1a4dffba6f3edd0b!2s21%20Allen%20Rd%2C%20Bedfordview%2C%20Germiston%2C%202008!5e0!3m2!1sen!2sza!4v1780078273060!5m2!1sen!2sza" 
-    width="97%" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
+  <!-- Google Maps Embed -->
+  <section id="map">
+    <h2>Route to Our Office</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.628462127766!2d28.148602074996194!3d-26.176226977093865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e951187637b6cc3%3A0x1a4dffba6f3edd0b!2s21%20Allen%20Rd%2C%20Bedfordview%2C%20Germiston%2C%202008!5e0!3m2!1sen!2sza!4v1780078273060!5m2!1sen!2sza" 
+      width="97%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
 
-<button id="scroll-top" class="button" style="display:none; position:fixed; bottom:20px; right:20px;">
-  ↑ Top
-</button>
+  <!-- Scroll-to-top button -->
+  <button id="scroll-top" class="button" style="display:none; position:fixed; bottom:20px; right:20px;">
+    ↑ Top
+  </button>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Charis Technologies | Phone: +27 83 400 7413 | Email: info@charistech.co.za</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
 </html>
