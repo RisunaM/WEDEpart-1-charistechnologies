@@ -76,4 +76,7 @@ The full project history is maintained in [CHANGELOG.md](CHANGELOG.md).
 - Added clearer project overview, goals, target audience, and technical details.
 - Refined website content and layout documentation.
 - Added project screenshots and updated references.
+- Added the live GitHub Pages deployment link to the project notes.
+
+Site is live at https://risunam.github.io/WEDEpart-1-charistechnologies/
 
