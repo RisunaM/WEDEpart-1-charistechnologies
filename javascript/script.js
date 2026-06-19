@@ -23,7 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// 🌟 Gallery hover zoom (matches CSS transition)
+// 🌟 Gallery hover zoom
 document.querySelectorAll(".image-grid img").forEach(img => {
   img.addEventListener("mouseenter", () => {
     img.style.transform = "scale(1.05)";
@@ -33,7 +33,7 @@ document.querySelectorAll(".image-grid img").forEach(img => {
   });
 });
 
-// 🌟 Form validation with clearer feedback
+// 🌟 Form validation
 function validateForm() {
   const name = document.getElementById("name");
   const email = document.getElementById("email");
@@ -53,3 +53,31 @@ function validateForm() {
   alert("✅ Form submitted successfully!");
   return true;
 }
+
+// 🌟 Mobile menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
+
+// 🌟 Scroll‑to‑top button
+const scrollBtn = document.getElementById("scroll-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+

@@ -235,3 +235,16 @@ header {
     transition: transform 0.3s ease;
 }
 
+
+/* Mobile menu toggle */
+nav ul.active {
+  display: flex;
+  flex-direction: column;
+  background-color: #330ec8; /* royal blue */
+}
+
+/* Scroll-to-top button */
+#scroll-top {
+  z-index: 1000;
+  cursor: pointer;
+}
