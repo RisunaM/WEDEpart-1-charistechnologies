@@ -78,3 +78,23 @@ const navMenu = document.querySelector("nav ul");
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
+// 🌟 Lightbox zoom effect
+const images = document.querySelectorAll(".image-grid img");
+const lightbox = document.createElement("div");
+lightbox.classList.add("lightbox");
+document.body.appendChild(lightbox);
+
+const lightboxImg = document.createElement("img");
+lightbox.appendChild(lightboxImg);
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+// Close lightbox when clicked
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});

@@ -217,3 +217,31 @@ footer p {
   h1 { font-size: 1.5rem; }
   section { padding: 20px 10px; }
 }
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Enlarged image */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
