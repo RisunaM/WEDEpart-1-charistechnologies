@@ -236,83 +236,16 @@ nav ul.active {
   background-color: transparent;
   transform: scale(1.05);
 }
-/* Side menu hidden by default */
-nav ul {
-  position: fixed;
-  top: 0;
-  right: -250px; /* hidden off-screen */
-  height: 100%;
-  width: 250px;
-  background: transparent; /* fully transparent background */
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px;
-  transition: right 0.4s ease-in-out; /* smooth slide */
-  z-index: 999;
-}
-
-/* Active state: slide in */
-nav ul.active {
-  right: 0; /* slides into view */
-}
-
-nav ul li {
-  margin: 15px 0;
-}
-
-nav ul li a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #2ECC71;
-}
-// 🌟 Side menu toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.querySelector("nav ul");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-/* Side menu */
-nav ul {
-  position: fixed;
-  top: 0;
-  right: -250px; /* hidden off-screen */
-  height: 100%;
-  width: 250px;
-  background: rgba(51, 14, 200, 0.9);
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px;
-  transition: right 0.4s ease-in-out;
-  z-index: 2000; /* make sure menu is above video and other content */
-}
-
-/* Active state: slide in */
-nav ul.active {
-  right: 0;
-}
-
 /* Menu links */
-nav ul li {
-  margin: 15px 0;
-}
-
 nav ul li a {
-  color: #fff;
+  color: #2ECC71;        /* highlight green for visibility */
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
-  z-index: 2100; /* ensures links are clickable */
-  position: relative; /* makes z-index apply */
+  position: relative;
+  z-index: 10000;        /* ensures links are clickable */
 }
 
 nav ul li a:hover {
-  color: #2ECC71;
+  color: #FFFFFF;        /* white on hover for contrast */
 }
